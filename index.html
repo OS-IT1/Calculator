@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Digital-7">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="calc">
+
+        <input id="Screen" readonly>
+        
+        <div id="Keys">
+            <button onclick="toDisplay('+')" class="operator">+</button>
+            <button onclick="toDisplay('7')">7</button>
+            <button onclick="toDisplay('8')">8</button>
+            <button onclick="toDisplay('9')">9</button>
+            <button onclick="toDisplay('-')" class="operator">-</button>
+            <button onclick="toDisplay('4')">4</button>
+            <button onclick="toDisplay('5')">5</button>
+            <button onclick="toDisplay('6')">6</button>
+            <button onclick="toDisplay('x')" class="operator">x</button>
+            <button onclick="toDisplay('1')">1</button>
+            <button onclick="toDisplay('2')">2</button>
+            <button onclick="toDisplay('3')">3</button>
+            <button onclick="toDisplay('/')" class="operator">/</button>
+            <button onclick="toDisplay('0')">0</button>
+            <button onclick="toDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearScreen()" class="clear">CE</button>
+            <button onclick="toDisplay('del')"class="del">Del</button>
+            <button onclick="toDisplay('π')">π</button> 
+            <button onclick="toDisplay(ans)" class="ans">ANS</button>
+            <button onclick="toDisplay('(')" >(</button>
+            <button onclick="toDisplay(')')" >)</button>
+            <button onclick="toDisplay('^')">x<sup>y</sup></button>
+            <button onclick="toDisplay('√(')">√</button> <!-- Added square root button -->
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
