@@ -47,6 +47,24 @@ function scrollToLeft(){
     screen.scrollToRight=screen.scrollWidth;
 }
 
+function calculate(){
+    try {
+        let expression = screen.value.replace(/π/g, 'Math.PI');
+        expression = expression.replace(/x/g, '*');
+        expression = expression.replace(/log/g, 'Math.log10');
+        expression = expression.replace(/\^/g, '**');
+        expression = expression.replace(/√/g, 'Math.sqrt');
+        expression = expression.replace(/Ans/g, ans);
+        screen.value = evaluate(expression);
+        if(screen.value !== 'Error'){
+            ans = screen.value;
+        }
+    } catch (error) {
+        screen.value = "Error";
+    }
+    scrollToLeft();
+}
+
 function evaluate(expression){
     try {
         const tokens = expression.match(/(\d+(\.\d+)?)|[\+\-\*\/\^\(\)π]|Math\.\w+\(/g);
@@ -74,7 +92,7 @@ function evaluate(expression){
         };
 
         tokens.forEach(token => {
-            if (parseFloat(token) || token === '0') {
+            if (!isNaN(parseFloat(token))) {
                 outputQueue.push(token);
             } else if (token === 'π') {
                 outputQueue.push(Math.PI);
@@ -99,9 +117,9 @@ function evaluate(expression){
 
         const stack = [];
         outputQueue.forEach(token => {
-            if (parseFloat(token) || token === '0') {
+            if (!isNaN(parseFloat(token))) {
                 stack.push(parseFloat(token));
-            } else if (token === 'Math.PI') {
+            } else if (token === Math.PI) {
                 stack.push(Math.PI);
             } else {
                 const b = stack.pop();
