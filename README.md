@@ -11,5 +11,5 @@
   </ul>
 </ul>
 <p>The number and operator buttons have their usual use.</p>
-<p>The Ans button is used to store the ans of the previous calculation. By default it is set to 0.</p>
+<p>The Ans button is used to store the answer of the previous calculation. By default it is set to 0.</p>
 
