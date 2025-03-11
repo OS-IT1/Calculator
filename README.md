@@ -6,7 +6,7 @@
   <ul>
     <li>Number</li>
     <li>Operators</li>
-    <li>Evaluation/limory</li>
+    <li>Evaluation/Memory</li>
     <li>Del/Clear</li>
   </ul>
 </ul>
