@@ -61,3 +61,15 @@ button:active{
 .ans{
     color: rgb(0, 170, 255);
 }
+.on{
+    color: white;
+}
+.off {
+    color: white;
+}
+.on.active{
+    color: rgb(170, 9, 170);
+}
+.off.active {
+    color: rgb(170, 9, 170);
+}
